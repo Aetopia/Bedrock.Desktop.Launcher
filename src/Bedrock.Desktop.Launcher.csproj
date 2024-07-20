@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net481</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Optimize>true</Optimize>
+    <PublishRelease>true</PublishRelease>
+
+    <ApplicationManifest>Resources/.manifest</ApplicationManifest>
+    <ApplicationIcon>Resources/.ico</ApplicationIcon>
+
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyTitle>Bedrock Desktop Launcher</AssemblyTitle>
+    <Product>Bedrock Desktop Launcher</Product>
+    <Copyright>Copyright (C) 2024</Copyright>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources/GetExtendedUpdateInfo2.xml.gz">
+      <LogicalName>GetExtendedUpdateInfo2.xml.gz</LogicalName>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Resources/GetCookie.xml.gz">
+      <LogicalName>GetCookie.xml.gz</LogicalName>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Resources/SyncUpdates.xml.gz">
+      <LogicalName>SyncUpdates.xml.gz</LogicalName>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Resources/Document.html.gz">
+      <LogicalName>Document.html.gz</LogicalName>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Resources/.ico">
+      <LogicalName>.ico</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.2" />
+  </ItemGroup>
+</Project>
